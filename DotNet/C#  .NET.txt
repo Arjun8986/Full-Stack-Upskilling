@@ -1,0 +1,57 @@
+C# / .NET
+
+Difference between abstract class and interfaces, along with use cases
+
+Why are interfaces needed when a class can be injected into the controller?
+
+Difference between IEnumerable, IQueryable (Deferred Execution), and List — when to use which
+
+How is an incoming request mapped to a Web API?
+
+What are extension methods?
+
+Runtime polymorphism vs compile-time polymorphism
+
+Difference between Liskov Substitution Principle and method overriding
+
+Real-world examples of AddSingleton, AddScoped, and AddTransient
+
+What is the IoC container in .NET Core?
+
+What are middleware extension methods?
+
+
+#Microsoft Azure
+
+What is PaaS in Azure?
+
+Are Azure Functions stateless or stateful?
+
+Why do we use Blob Storage?
+
+How does the connection with Service Bus work?
+
+How does the connection between Blob Storage and .NET Core code work?
+
+#SQL
+
+How to optimize SQL Stored Procedures
+
+Difference between CTE, Table Variable, and Template
+
+Types of indexes
+
+
+#Angular
+
+Difference between Observables and Promises
+
+What are Observables?
+
+Difference between Subject and BehaviorSubject
+
+Why use BehaviorSubject when we can use a simple variable?
+
+Content Negotiation
+
+Other ways to pass data between components apart from @Input and @Output
