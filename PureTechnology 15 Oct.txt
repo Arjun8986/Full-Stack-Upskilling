@@ -1,0 +1,59 @@
+JavaScript
+-Introduction, What is your project structure
+-function expression and function statement
+-explain event loop
+-let, var, const
+Angular
+-want to show loader when multiple api calls ongoing
+-what is diff between merge map and fork join
+-url become long , how to short it without losing data
+-lets say there is website like hotstar how to download video using angular
+Java
+-How to pass argument in java and it preference
+-How can we use 2 DB in same project
+-How to use the Utils which is outside project of spring boot app.
+-java -jar app.jar --User=user --Pass=pwd
+-how the exceptions is handled in your app and how to debug and any new exception occurred which is not handled.
+
+
+
+#1 Find output
+console.log(x)
+var x = 1;
+function x (){};
+console.log(x);
+
+#2 
+function multiply(a,b){
+ // write code when it is calling same parameter say same to avoid duplicate call
+ return a*b;
+}
+
+multiply(5,6);
+multiply(5,6);
+
+#3
+String s = "java";
+s.concat(" Developer");
+System.out.println(s);
+
+#4
+List<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+
+For(Integer n: numbers){
+  if(n%2 == 0){
+   numbers.remove(n);
+}
+}
+
+System.out.println(numbers);
+
+#5
+Stream<Integer> stream = Stream.of(1,2,3);
+System.out.println(stream.count());
+System.out.println(stream.findFirst());
+
+
+
+
+

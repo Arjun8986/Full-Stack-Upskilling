@@ -1,0 +1,15 @@
+set ANTHROPIC_BASE_URL=http://localhost:12434
+
+set ANTHROPIC_AUTH_TOKEN=docker
+
+docker model configure --context-size 32768 ai/smollm3:latest
+
+claude --model ai/smollm3:latest
+
+docker model configure --context-size 32768 ai/smollm3:latest
+
+docker model run ai/smollm3:latest
+
+docker model run qwen2.5:3B-Q4_K_M "Say hello"
+docker model status
+docker model ls
