@@ -1,0 +1,20 @@
+<section class="todo-list-section">
+    @for (todo of todos(); track todo.id) {
+    <div class="todo-row">
+        <app-todo-item [todo]="todo" (deleteTaskEvent)="deleteTask($event)" (updateTodoEvent)="updateTodo($event)">
+        </app-todo-item>
+    </div>
+    } @empty {
+    <div class="empty-state">
+        <div class="empty-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+            </svg>
+        </div>
+        <p class="empty-title">All tasks completed!</p>
+        <p class="empty-desc">Take a break or add a new goal above.</p>
+    </div>
+    }
+</section>

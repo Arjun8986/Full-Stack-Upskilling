@@ -1,0 +1,42 @@
+<main class="todo-app-card">
+  <header class="app-header">
+    <div class="header-top">
+      <div class="title-group">
+        <div class="title-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="m9 11 3 3L22 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+          </svg>
+        </div>
+        <h1>{{ title() }}</h1>
+      </div>
+      <span class="badge" [class.badge-done]="remainingCount() === 0">
+        {{ remainingCount() }} pending
+      </span>
+    </div>
+    <p class="subtitle">Stay organized and get things done</p>
+  </header>
+
+  <section class="add-todo-section">
+    <div class="input-wrapper">
+      <input type="text" [formControl]="taskControl" (keydown.enter)="addTask()" placeholder="Add a new task..."
+        aria-label="New task title" class="task-input" />
+      <button class="add-button" (click)="addTask()" [disabled]="!taskControl.value.trim()" type="button">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="btn-icon">
+          <path
+            d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+        </svg>
+        <span>Add</span>
+      </button>
+    </div>
+  </section>
+
+  <app-todo-list [todos]="todos"></app-todo-list>
+
+  @if (todos().length > 0) {
+  <footer class="app-footer">
+    <span>{{ completedCount() }} of {{ todos().length }} tasks completed</span>
+  </footer>
+  }
+</main>
